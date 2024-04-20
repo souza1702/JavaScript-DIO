@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    margin-bottom: 100px;
+}
+body{
+    background-color: blueviolet;
+}
+h1{
+    text-align: center;
+}
+main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.dados{
+    width: 100%;
+    height: 500px;
+    border: solid black 1px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.dados fieldset{
+    width: 80%;
+    margin: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: large;
+    padding: 10px;
+    
+}
+.dados input{
+    display: block;
+}

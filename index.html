@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculo do custo da viajem</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Ferramente que calcula o custo da viagem.</h1>
+    </header>
+    <main>
+        <section class="content">
+            <section class="dados">
+                <fieldset>
+                    <legend>Informações da viajem</legend>
+                    <label for="combustivel">Informe o preço da gasolina em R$.</label>
+                    <input type="number" name="combustivel" id="combustivel">
+
+                    <label for="consumo">Informe o consumo médio do seu carro.</label>
+                    <input type="number" nome="consumo" id="consumo">
+                    
+                    <label for="distancia">Informe a distância da viajem.</label>
+                    <input type="number" name="distancia" id="distancia">
+                    <button onclick="Calculo()">Enviar</button>
+                </fieldset>
+                <div class="resultado">
+                    <span id="resultado"></span> 
+                 </div> 
+        </section> 
+    </main>
+    <script src="calculo_custo_viajem.js"></script>
+</body>
+</html>
