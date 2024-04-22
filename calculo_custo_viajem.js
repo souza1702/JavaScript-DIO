@@ -1,16 +1,21 @@
-var preco = document.getElementById("combustivel")
-var consumo = document.getElementById("consumo")
-var distanciaViajem= document.getElementById("distancia")
-var resultado = document.getElementById("resultado")
+var resultado = document.getElementById("resultado");
+function Exibir() {
+    var tipoCombustivel = document.querySelector('input[name="option"]:checked').value;
+    if (tipoCombustivel == "gasolina" || tipoCombustivel == 'etanol'){
+        
+        return CalculoCusto()
+    }
+    else{
+        console.log("Erro")
+    }
+}
+function CalculoCusto(){
+    var tipoCombustivel = document.querySelector('input[name="option"]:checked').value;
+    var preco = document.getElementById("preco").value
+    var consumo = document.getElementById("consumo").value
+    var distancia = document.getElementById("distancia").value
 
-function Calculo(){
-    const consumoCarro = (distanciaViajem.value / consumo.value)
-    const custo = (consumoCarro * preco.value)
-    
-    const Preco = preco.value
-    const Consumo = consumo.value
-    const Distancia = distanciaViajem.value
-
-    resultado.innerHTML = `Para uma viajem de ${Distancia}km, com um carro que consome ${Consumo} l/km, com o combustível custando ${Preco} o custo total da viajem foi de ${custo}R$.`
-
+    const ConsumoViajem = (distancia / consumo)
+    const CustoTotal= (ConsumoViajem * preco)
+    resultado.innerHTML = `O custo de uma viajem de ${distancia}km, usando ${tipoCombustivel} é de ${CustoTotal} R$.`
 }
