@@ -3,40 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Calculo de IMC</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<header>
-    <h1>Calculo do consumo de combustível</h1>
-</header>
 <body>
     <fieldset>
-        <div class="option">
-            <input type="radio" name="option" id="tipo" checked value="gasolina">
-            <label for="gasolina">Gasolina</label>
-            <input type="radio" name="option" id="tipo" value="etanol">
-            <label for="etanol">Etanol</label>
+                <div class="form">
+            <input type="number" id="altura" name="altura" placeholder="1.75" required>
+            <label for="altura">Insira sua altura em metros.</label>
+            
+            <input type="number" name="peso" id="peso" placeholder="65.5" required>
+            <label for="peso">Informe seu pelo em quilogramas.</label>
+            
+            <input type="text" name="nome" id="nome" required>
+            <label for="nome">Informe seu nome.</label>
+            <button onclick="CalcIMC()">Calcular</button> 
         </div>
-        
-
-        <div class="form">
-            <label for="preco">Insira o precço do combustível selecionado.</label>
-            <input type="number" name="preco" id="preco">
-
-            <label for="consumo">Informe o consumo do seu carro.</label>
-            <input type="number" name="consumo" id="consumo">
-    
-            <label for="distancia">Informe a distância da viajem em Km.</label>
-            <input type="number" name="distancia" id="distancia">
-
-            <button onclick="Exibir()">Enviar</button> 
-        </div>
-
     </fieldset>
-    <fieldset>
-        <h2>Resultado:</h2>
-        <p id="resultado"></p>
+    <fieldset class="result">
+        <h2>Resultado do seu IMC</h2>
+        <p id="resultado">
+
+        </p>
     </fieldset>
-    <script src="calculo_custo_viajem.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
